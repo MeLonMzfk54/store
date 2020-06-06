@@ -1,4 +1,4 @@
-<?php require_once 'includes/db.php';?>
+<?php mysqli_report(MYSQLI_REPORT_ERROR | MYSQLI_REPORT_STRICT); require_once 'includes/db.php';?>
 <?php session_start();?>
 <!DOCTYPE html>
 <html lang="en">
@@ -16,10 +16,11 @@
 <body>
     <div class="wrapper">
         <?php require_once("header.php");?>   
+        
         <section class="cabinet">
             <div class="container">
+               <?php if(isset($_SESSION["username"])){?>
                 <div class="cabinet__inner">
-                   <?php if(isset($_SESSION['username'])){ ?>
                     <h1 class="cabinet__title">Личный кабинет</h1>
                     <div class="cabinet__info">
                         <div class="cabinet__avatar"><img src="img/vLmJ5GrfGXw.jpg" alt="Аватар"><p>Потом допилю загрузку <br> аватарок, если надо, <br>а так пусть висит эта</p></div>
@@ -29,12 +30,34 @@
                         </div>
                     </div>
                     <div class="cabinet__wishes">
-                        <h2 class="cabinet__subtitle">Список пожеланий</h2>
+                    <h2 class="cabinet__subtitle">Список пожеланий</h2>
+                     <div class="products__block">
+                    <?php } ?>
+                    <?php if(isset($_SESSION['username'])){ 
+                    $login = $_SESSION['username'];
+                                $sql = "SELECT * FROM wishes where login = '$login'";
+                                    $result = mysqli_query($conn,$sql);
+                $wishes = mysqli_fetch_all($result, MYSQLI_ASSOC);
+            foreach($wishes as $wish){
+                    ?>
+                          
+                               <div class="products__item">
+                                   <div class="products__image"><img src="<?php echo $wish['image'] ?>" alt="Футболка"></div>
+                                   <div class="products__desc">
+                                       <h4 class="products__name"><?php echo $wish['title'] ?></h4>
+                                       <div class="products__price">
+                                           <button id="" class="products__link"><i class="fa fa-shopping-basket"></i></button>
+                                           <strong class="products__cost"><?php echo $wish['cost'] ?><span>руб.</span></strong>
+                                       </div>
+                                   </div>
+                               </div>
+                           <?php }?>
+                            </div>
                     </div>
                     <?php } else{ ?>
                     <h1 class="cabinet__title">Вы не вошли в аккаунт</h1>
                     <div class="cabinet__logout"><a href="choose.php" class="cabinet__link">Вход</a></div>
-                    <?php }?>
+                    <?php } ?>
                 </div>
             </div>
         </section>

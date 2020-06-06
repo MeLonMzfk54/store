@@ -45,10 +45,9 @@ $(".overlay__close").click(function(){
                 $(".reg__mail").css("border","none");
                 $(".reg__mail").css("border-bottom","2px solid white");
             }
-             valId = false;
-             return valId;  
-        }
-        $.ajax({
+      
+        }else{
+             $.ajax({
             type: "POST",
             url:"includes/reg.php",
             data: $(this).serialize()
@@ -59,7 +58,9 @@ $(".overlay__close").click(function(){
             $(".sign").fadeIn();
             $(".registration").fadeOut();
         });
-        return false;
+        return false;   
+        }   
+        
     });
 });
 

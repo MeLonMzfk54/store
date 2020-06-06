@@ -36,8 +36,8 @@
                                    <h4 class="products__name"><?php echo $product['title'];?></h4>
                                    <div class="products__text"><?php echo $product['content'];?></div>
                                    <div class="products__price">
-                                    <a href="#" id="<?php echo $product['id']; ?>" class="products__link"><i class="fa fa-shopping-basket"></i></a>
-                                    <a href="#" id="<?php echo $product['lid']; ?>" class="products__link products__link_heart"><i class="fa fa-heart"></i></a>
+                                    <button id="<?php echo $product['id']; ?>" class="products__link"><i class="fa fa-shopping-basket"></i></button>    
+                                    <button id="<?php echo $product['lid']; ?>" data-id="<?php echo $product['lid'];?>"  class="products__link products__link_heart"><i class="fa fa-heart"></i></button>
                                        <strong class="products__cost"><?php echo $product['cost'];?> <span>руб.</span></strong>
                                    </div>
                             </div>
@@ -53,8 +53,8 @@
                                    <h4 class="products__name"><?php echo $product['title'];?></h4>
                                    <div class="products__text"><?php echo $product['content'];?></div>
                                    <div class="products__price">
-                                    <a href="#" class="products__link"><i class="fa fa-shopping-basket"></i></a>
-                                    <a href="#" class="products__link products__link_heart"><i class="fa fa-heart"></i></a>
+                                    <button id="<?php echo $product['id']; ?>" class="products__link"><i class="fa fa-shopping-basket"></i></button>
+                                    <button id="<?php echo $product['lid']; ?>" data-id="<?php echo $product['lid'];?>"  class="products__link products__link_heart"><i class="fa fa-heart"></i></button>
                                        <strong class="products__cost"><?php echo $product['cost'];?>  <span>руб.</span></strong>
                                    </div>
                             </div>
@@ -70,5 +70,7 @@
   <script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.js"></script>
   <!-- JS -->
   <script type="text/javascript" src="js/script.js"></script> 
+<!--  wishes.js-->
+<script src="js/wishes.js"></script>
 </body>
 </html>

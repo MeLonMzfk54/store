@@ -434,7 +434,6 @@ html {
   padding: 70px 0px;
   color: white;
   background-color: #393648;
-  height: 80vh;
 }
 .cabinet__title {
   text-transform: uppercase;
@@ -529,6 +528,7 @@ html {
 .products__link {
   color: white;
   transition: 0.4s all ease;
+  background-color: transparent;
 }
 .products__link:hover {
   color: #FFE7A1;
