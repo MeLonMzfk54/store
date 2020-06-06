@@ -371,7 +371,6 @@ html{
     padding: 70px 0px;
     color: white;
     background-color: #393648;
-    height: 80vh;
     &__inner{}
     &__title{
         text-transform: uppercase;
@@ -476,6 +475,7 @@ html{
     &__link{
         color: white;
         transition: .4s all ease;
+        background-color: transparent;
         &:hover{
             color: #FFE7A1;
         }

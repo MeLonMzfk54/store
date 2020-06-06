@@ -65,7 +65,7 @@
                                 <input type="password" placeholder="Введите ваш пароль" name="rPass" class="sign__input reg__pass">
                                 <input type="password" placeholder="Подтвердите пароль" name="rPass2" class="sign__input reg__pass2">
                                 <input type="mail" placeholder="Введите вашу почту" name="rMail" class="sign__input reg__mail">
-                                <input type="submit" value="регистрация" name="rSub" class="sign__submit">
+                                <input type="submit" value="регистрация" name="rSub" class="sign__submit registration__submit">
                             </form>
                             <div class="sign__question">Уже зарегистрированы?<span class="registration__enter">Войти</span></div>
                         </div>
