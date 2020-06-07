@@ -13,9 +13,9 @@
                               <li class="header__item"><a href="#" class="header__link">Футболки</a></li>
                               <li class="header__item"><a href="#" class="header__link">Джинсы</a></li>
                               <li class="header__item header__icons">
-                              <a class="header__link_icon" href="#"><i class="fa fa-shopping-cart"></i></a>
+                              <a class="header__link_icon" href="bascket.php"><i class="fa fa-shopping-cart"></i></a>
                               <a class="header__link_icon" href="cabinet.php"><i class="fa fa-user"></i><span class="header__user"><?php echo $_SESSION['username'] ?></span></a>
-                              <a class="header__link_icon" href="choose.php"><i class="fa fa-arrow-up"></i></a>
+                              <a class="header__link_icon" href="choose.php"><i class="fa fa-user-plus"></i></a>
                               </li>
                           </ul>
                       </nav>

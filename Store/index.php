@@ -36,8 +36,10 @@
                                    <h4 class="products__name"><?php echo $product['title'];?></h4>
                                    <div class="products__text"><?php echo $product['content'];?></div>
                                    <div class="products__price">
-                                    <button id="<?php echo $product['id']; ?>" class="products__link"><i class="fa fa-shopping-basket"></i></button>    
-                                    <button id="<?php echo $product['lid']; ?>" data-id="<?php echo $product['lid'];?>"  class="products__link products__link_heart"><i class="fa fa-heart"></i></button>
+                                   <?php if(isset($_SESSION["username"])){?>
+                                    <button title="Добавить в корзину" id="<?php echo $product['kid']; ?>" class="products__link"><i class="fa fa-shopping-basket"></i></button>    
+                                    <button id="<?php echo $product['lid']; ?>" title="Добавить в список пожеланий" data-id="<?php echo $product['lid'];?>" class="products__link_heart"><i class="fa fa-heart"></i></button>
+                                       <?php } ?>
                                        <strong class="products__cost"><?php echo $product['cost'];?> <span>руб.</span></strong>
                                    </div>
                             </div>
@@ -53,8 +55,10 @@
                                    <h4 class="products__name"><?php echo $product['title'];?></h4>
                                    <div class="products__text"><?php echo $product['content'];?></div>
                                    <div class="products__price">
-                                    <button id="<?php echo $product['id']; ?>" class="products__link"><i class="fa fa-shopping-basket"></i></button>
-                                    <button id="<?php echo $product['lid']; ?>" data-id="<?php echo $product['lid'];?>"  class="products__link products__link_heart"><i class="fa fa-heart"></i></button>
+                                   <?php if(isset($_SESSION["username"])){?>
+                                    <button id="<?php echo $product['kid']; ?>" title="Добавить в корзину" class="products__link"><i class="fa fa-shopping-basket"></i></button>
+                                    <button id="<?php echo $product['lid']; ?>" title="Добавить в список пожеланий"  data-id="<?php echo $product['lid'];?>" class=" products__link_heart"><i class="fa fa-heart"></i></button>
+                                      <?php } ?>
                                        <strong class="products__cost"><?php echo $product['cost'];?>  <span>руб.</span></strong>
                                    </div>
                             </div>
@@ -72,5 +76,7 @@
   <script type="text/javascript" src="js/script.js"></script> 
 <!--  wishes.js-->
 <script src="js/wishes.js"></script>
+<!--Bascket.js-->
+<script src="js/bascket.js"></script>
 </body>
 </html>

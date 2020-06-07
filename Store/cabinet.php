@@ -39,17 +39,17 @@
                                     $result = mysqli_query($conn,$sql);
                 $wishes = mysqli_fetch_all($result, MYSQLI_ASSOC);
             foreach($wishes as $wish){
-                    ?>
-                          
+                    ?>      <div class="cabinet__item">
                                <div class="products__item">
                                    <div class="products__image"><img src="<?php echo $wish['image'] ?>" alt="Футболка"></div>
                                    <div class="products__desc">
                                        <h4 class="products__name"><?php echo $wish['title'] ?></h4>
                                        <div class="products__price">
-                                           <button id="" class="products__link"><i class="fa fa-shopping-basket"></i></button>
+                                           <button title="Удалить из списка пожеланий" id="<?php echo $wish["idLid"]?>" class=" products__link_delete"><i class="fa fa-times"></i></button>
                                            <strong class="products__cost"><?php echo $wish['cost'] ?><span>руб.</span></strong>
                                        </div>
                                    </div>
+                               </div>
                                </div>
                            <?php }?>
                             </div>
@@ -67,5 +67,9 @@
   <script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.js"></script>
   <!-- JS -->
   <script type="text/javascript" src="js/script.js"></script> 
+<!-- DeleteWishes.js -->
+<script type="text/javascript" src="js/delete.js"></script>
+<!--check.js-->
+<script type="text/javascript" src="js/check.js"></script>
 </body>
 </html>
