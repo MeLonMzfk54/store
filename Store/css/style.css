@@ -435,6 +435,12 @@ html {
   color: white;
   background-color: #393648;
 }
+.cabinet .products__desc {
+  text-align: center;
+}
+.cabinet .fa-times {
+  padding: 0px 10px;
+}
 .cabinet__title {
   text-transform: uppercase;
   font-size: 25px;
@@ -474,6 +480,7 @@ html {
 }
 .cabinet__subtitle {
   text-align: center;
+  padding-bottom: 70px;
 }
 
 .products {
@@ -504,6 +511,8 @@ html {
 }
 .products__image img {
   border: 2px solid cadetblue;
+  width: 250px;
+  height: 250px;
 }
 .products__desc {
   color: white;
@@ -533,8 +542,21 @@ html {
 .products__link:hover {
   color: #FFE7A1;
 }
+.products__link_heart {
+  color: white;
+  transition: 0.4s all ease;
+  background-color: transparent;
+}
 .products__link_heart:hover {
   color: red;
+}
+.products__link_delete {
+  color: white;
+  transition: 0.4s all ease;
+  background-color: transparent;
+}
+.products__link_delete:hover {
+  color: firebrick;
 }
 .products hr {
   width: 100%;
@@ -550,4 +572,67 @@ html {
     flex-direction: column;
     align-items: center;
   }
+  .products__item {
+    padding-bottom: 20px;
+  }
+}
+
+.bascket {
+  padding: 70px 0px;
+  color: white;
+  background-color: #393648;
+  height: 80vh;
+}
+.bascket__container {
+  max-width: 750px;
+  padding: 0 15px;
+  margin: 0 auto;
+}
+.bascket__title {
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 35px;
+}
+.bascket__name {
+  padding-top: 50px;
+}
+.bascket__item {
+  display: flex;
+  padding-top: 15px;
+}
+.bascket__item:first-child {
+  padding-top: 30px;
+}
+.bascket__product {
+  padding: 0px 30px 0px 15px;
+}
+.bascket__result {
+  padding-top: 70px;
+}
+.bascket__button {
+  text-align: center;
+  padding-top: 50px;
+  text-transform: uppercase;
+  transition: 0.4s all ease;
+}
+.bascket__button a {
+  color: white;
+  background-color: #FFE7A1;
+  padding: 10px 5px;
+  border-radius: 2px;
+}
+.bascket__button:hover {
+  transform: rotate(360deg);
+}
+.bascket__pay {
+  text-align: center;
+  padding-top: 50px;
+  text-transform: uppercase;
+  transition: 0.4s all ease;
+}
+.bascket__pay a {
+  color: white;
+  background-color: #FFE7A1;
+  padding: 10px 5px;
+  border-radius: 2px;
 }

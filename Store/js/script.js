@@ -15,3 +15,4 @@ if($(".hello__text").text() != ""){
 }else if ($(".hello__text").text() == ""){
     $(".hello__link").css("padding","0");
 }
+
