@@ -537,6 +537,42 @@ html{
         margin: 0 auto;
     }
     &__inner{}
+    &__value{
+        display: flex;
+        align-items: center;
+        padding-left: 30px;
+    }
+    &__minus,
+    &__plus{
+        cursor: pointer;
+    }
+    &__delete_txt{
+        display: none;
+    }
+    &__minus{
+        transition: .4s all ease;
+        &:hover{
+            color: red;
+        }
+    }
+    &__del{
+        background: transparent;
+        color: white;
+        padding-left: 20px;
+        transition: .4s all ease;
+        &:hover{
+            color: darkred;
+        }
+    }
+    &__plus{
+        transition: .4s all ease;
+        &:hover{
+            color: greenyellow;
+        }
+    }
+    &__count{
+        padding: 0px 10px;
+    }
     &__title{
         text-transform: uppercase;
         text-align: center;
@@ -586,6 +622,22 @@ html{
             background-color: #FFE7A1;
             padding: 10px 5px;
             border-radius: 2px;
+        }
+    }
+    @media(max-width:472px){
+        &__item{
+            flex-direction: column;
+            align-items: center;
+        }
+        &__value{
+            padding-left: 0px;
+            padding: 10px 0px;
+        }
+        &__del{
+            padding-left: 0px;
+        }
+        &__product{
+            padding: 10px 0px;
         }
     }
 }

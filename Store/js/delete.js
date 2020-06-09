@@ -11,9 +11,10 @@ $(document).ready(function(){
                 url: "includes/deleteWishes.php",
                 data: {delId: delId}
             }).done(function(){
-                alert("Удалено");
+                $(del[i]).parent(".products__price").fadeOut();
+                $(del[i]).parent(".products__price").siblings(".products__name").text("Удалено");
             }).fail(function(){
-               alert("Не удалено!"); 
+               alert("error"); 
             });
         });
     }

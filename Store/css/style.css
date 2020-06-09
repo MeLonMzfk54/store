@@ -588,6 +588,41 @@ html {
   padding: 0 15px;
   margin: 0 auto;
 }
+.bascket__value {
+  display: flex;
+  align-items: center;
+  padding-left: 30px;
+}
+.bascket__minus, .bascket__plus {
+  cursor: pointer;
+}
+.bascket__delete_txt {
+  display: none;
+}
+.bascket__minus {
+  transition: 0.4s all ease;
+}
+.bascket__minus:hover {
+  color: red;
+}
+.bascket__del {
+  background: transparent;
+  color: white;
+  padding-left: 20px;
+  transition: 0.4s all ease;
+}
+.bascket__del:hover {
+  color: darkred;
+}
+.bascket__plus {
+  transition: 0.4s all ease;
+}
+.bascket__plus:hover {
+  color: greenyellow;
+}
+.bascket__count {
+  padding: 0px 10px;
+}
 .bascket__title {
   text-transform: uppercase;
   text-align: center;
@@ -635,4 +670,20 @@ html {
   background-color: #FFE7A1;
   padding: 10px 5px;
   border-radius: 2px;
+}
+@media (max-width: 472px) {
+  .bascket__item {
+    flex-direction: column;
+    align-items: center;
+  }
+  .bascket__value {
+    padding-left: 0px;
+    padding: 10px 0px;
+  }
+  .bascket__del {
+    padding-left: 0px;
+  }
+  .bascket__product {
+    padding: 10px 0px;
+  }
 }
