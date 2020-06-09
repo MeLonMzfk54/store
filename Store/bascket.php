@@ -38,7 +38,9 @@
                         <div class="bascket__item">
                            <div class="bascket__number"><?php echo $counter ?>.</div>
                             <div class="bascket__product"><?php echo $product['title']; ?></div>
-                            <div class="bascket__cost"><?php echo $product['cost']; ?> рублей</div>
+                            <div class="bascket__cost"><span class="bascket__price"><?php echo $product['cost']; ?></span> рублей</div><span class="bascket__value"><span class="bascket__minus"><i class="fa fa-minus" aria-hidden="true"></i></span><span class="bascket__count">1</span><span class="bascket__plus"><i class="fa fa-plus" aria-hidden="true"></i></span></span>
+                            <div class="bascket__delete_txt">Удалено из корзины!</div>
+                            <button title="Удалить из корзины" id="<?php echo $product['idKid'] ?>" class="bascket__del"><i class="fa fa-times"></i></button>
                         </div>
                     </div>
                     <?php $counter++; } ?>
@@ -59,6 +61,9 @@
   <script type="text/javascript" src="https://code.jquery.com/jquery-3.5.1.js"></script>
   <!-- JS -->
   <script type="text/javascript" src="js/script.js"></script> 
-
+<!-- Calculate.js -->
+<script type="text/javascript" src="js/calculate.js"></script>
+<!--DeleteFromBascket.js-->
+<script type="text/javascript" src="js/delBascket.js"></script>
 </body>
 </html>

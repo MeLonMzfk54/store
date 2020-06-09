@@ -39,19 +39,23 @@
                                     $result = mysqli_query($conn,$sql);
                 $wishes = mysqli_fetch_all($result, MYSQLI_ASSOC);
             foreach($wishes as $wish){
+                $lid = $wish['lid'];
+               $kid =  str_replace("l","k",$lid);
+                    
                     ?>      <div class="cabinet__item">
                                <div class="products__item">
                                    <div class="products__image"><img src="<?php echo $wish['image'] ?>" alt="Футболка"></div>
                                    <div class="products__desc">
                                        <h4 class="products__name"><?php echo $wish['title'] ?></h4>
                                        <div class="products__price">
-                                           <button title="Удалить из списка пожеланий" id="<?php echo $wish["idLid"]?>" class=" products__link_delete"><i class="fa fa-times"></i></button>
+                                          <button id="<?php echo $kid ?>" title="Добавить в корзину" class="products__link"><i class="fa fa-shopping-basket"></i></button>
+                                           <button title="Удалить из списка пожеланий" id="<?php echo $wish["idLid"]?>" class="products__link_delete"><i class="fa fa-times"></i></button>
                                            <strong class="products__cost"><?php echo $wish['cost'] ?><span>руб.</span></strong>
                                        </div>
                                    </div>
                                </div>
                                </div>
-                           <?php }?>
+                           <?php  }?>
                             </div>
                     </div>
                     <?php } else{ ?>
@@ -71,5 +75,7 @@
 <script type="text/javascript" src="js/delete.js"></script>
 <!--check.js-->
 <script type="text/javascript" src="js/check.js"></script>
+<!--bascket.js-->
+<script type="text/javascript" src="js/bascket.js"></script>
 </body>
 </html>
